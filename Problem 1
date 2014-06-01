@@ -1,0 +1,16 @@
+; Project Euler
+; Problem 1: Multiples of 3 and 5
+; Language : Clojure
+; Code by Hanshavin (@devHanshavin)
+
+
+; Sumatoria(1 --> n)
+(defn Sum [n]
+	(/ (* n (+ n 1)) 2))
+
+; Sumatoria(a° < N)
+(defn S [a, N]
+	(let [n (int(/ (- N 1) a))] (* a (Sum n))))
+
+; Sumatoria(3° < 1000) + Sumatoria(5° < 1000) - Sumatoria(15° < 1000)
+(- (+ (S 3 1000) (S 5 1000)) (S 15 1000))
