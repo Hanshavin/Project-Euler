@@ -6,7 +6,7 @@
 
 ; Sum(1 to n)
 (defn Sum [n]
-	(/ (* n (inc n)) 2)) ;(reduce + (range (inc n))))
+	(/ (* n (inc n)) 2)) ; (reduce + (range (inc n))))
 
 ; Sum(a° < N)
 (defn S [a, N]
