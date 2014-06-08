@@ -10,7 +10,7 @@
 
 ; Sum(a° < N)
 (defn S [a, N]
-	(let [n (int(/ (dec N) a))] (* a (Sum n))))
+	(let [n (quot (dec N) a)] (* a (Sum n))))
 
 ; Sum(3° < 1000) + Sum(5° < 1000) - Sum(15° < 1000)
 (- (+ (S 3 1000) (S 5 1000)) (S 15 1000))
